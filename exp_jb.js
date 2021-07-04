@@ -2,7 +2,7 @@ function jailbreak(){
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
-let pausa = setTimeout(contraKP, 90000);
+let pausa = setTimeout(contraKP, 108000);
 
 function contraKP(){
 var ropchain_offset = 2;

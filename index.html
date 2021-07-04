@@ -1,6 +1,6 @@
 <html manifest="offlinexmb.cache">
 <head>
-<title>Prb-Br 7.55 Super Light 3 (Jb02052021+Ghen11)</title>
+<title>Prb-Br 7.55 Super Light 4 (Jb02052021+Ghen11)</title>
 <link rel="stylesheet" href="index.css">
 <body id=cache style="color:#6089f6;font-size:32px;" onload="go();" class="bg";>
 <script>
@@ -49,7 +49,7 @@ function done(){
     {
     }
     else
-        alert("Jailbreak failed! Reboot your PS4 and try again.");
+        alert("A exploração falhou! Reinicie o PS4 e tente novamente.");
 }
 
 window.midExploit = function(){
@@ -81,7 +81,7 @@ mymenu.style.display="block";
 	</div>
 
 <script>
-localStorage.infoDesb="ATENÇÃO! Executando exploração do kernel...";
+localStorage.infoDesb="ATENÇÃO! Aguardando a exploração do kernel...";
 window.infoDesb.innerHTML=localStorage.infoDesb;
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 
@@ -95,7 +95,7 @@ if (localStorage.failcount == null) localStorage.failcount=0;
 	window.failCounter.innerHTML=localStorage.failcount;
 
 function load_exploit(){
-msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>1m e 30s</font>. Por favor, não use o controle, <font style='color:#ee596f'>aguarde...</font><br>(Método MSZ_MGS)";
+msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>1m e 30s</font>. Por favor, não use o controle, <font style='color:#ee596f'>aguarde...<br><br><tr>Método MSZ_MGS</font>";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript(){getScript("exp_jb.js",function(){setTimeout(jailbreak,2000);});}loadScript();
 }
