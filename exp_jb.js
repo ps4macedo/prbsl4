@@ -2,7 +2,20 @@ function jailbreak(){
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
-let pausa = setTimeout(contraKP, 108000);
+
+var timeleft = 120;
+var downloadTimer = setInterval(function(){
+  document.getElementById("tempo").innerHTML = "Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS</font>";
+  timeleft -= 1;
+  if(timeleft <= -1){
+    clearInterval(downloadTimer);
+    document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (risco de kp).";
+    document.getElementById("tempo").innerHTML = "";
+	contraKP();
+  }
+}, 1000);
+
+//let pausa = setTimeout(contraKP, 108000);
 
 function contraKP(){
 var ropchain_offset = 2;

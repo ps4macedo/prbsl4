@@ -1,6 +1,6 @@
 <html manifest="offlinexmb.cache">
 <head>
-<title>Prb-Br 7.55 Super Light 4 (Jb02052021+Ghen11)</title>
+<title>Prb-Br 7.55 Super Light 4 (Jb02052021+Ghen11) @MSZ_MGS</title>
 <link rel="stylesheet" href="index.css">
 <body id=cache style="color:#6089f6;font-size:32px;" onload="go();" class="bg";>
 <script>
@@ -69,8 +69,9 @@ mymenu.style.display="block";
 </script>
    <div id=mymenu style="display:none">
 
-	  <br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br>
 	  <h1 id=msgs style='font-size:32px;text-align:center;'></h1>
+	  <h1 id=tempo style='font-size:32px;text-align:center;'></h1>
       
 	  <div style="text-align:left;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:#3dff8e">     
 	  <div>Passou = <font color="#6089f6"><span id=passCounter></span></font>&nbsp;&nbsp;/&nbsp;&nbsp;Falhou = <font color="#ee596f"><span id=failCounter></span></font></div>
@@ -95,14 +96,14 @@ if (localStorage.failcount == null) localStorage.failcount=0;
 	window.failCounter.innerHTML=localStorage.failcount;
 
 function load_exploit(){
-msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>2 minutos</font>. Por favor, não use o controle, <font style='color:#ee596f'>aguarde...<br><tr>Método MSZ_MGS</font><br><br>Aproveite esse tempo para tomar uma água.";
+msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>2 minutos</font>. Por favor, não use o controle.<br><br><font style='color:#ee596f'>A G U A R D E . . .</font>";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript(){getScript("exp_jb.js",function(){setTimeout(jailbreak,2000);});}loadScript();
 }
 
 function load_hen(){
-msgs.innerHTML="Exploração do kernel concluída com sucesso.<br><br><br><font style='color:#ee596f'>Carregando GoldHen V1.1 ...</font>";
-LoadedMSG="GoldHen v1.1 carregado com sucesso.<br><br><br><font style='color:#ee596f'>B O A &nbsp;&nbsp; D I V E R S Ã O ! ! ! </font>";
+msgs.innerHTML="<br>Exploração do kernel concluída com sucesso.<br><br><br><font style='color:#ee596f'>Carregando GoldHen V1.1 ...</font>";
+LoadedMSG="<br>GoldHen v1.1 carregado com sucesso.<br><br><br><font style='color:#ee596f'>B O A &nbsp;&nbsp; D I V E R S Ã O ! ! ! </font>";
 PLfile = "pl_hen.bin"
 loadScript2();
 }
