@@ -7,11 +7,11 @@ var timeleft = 120;
 var downloadTimer = setInterval(function(){
   document.getElementById("tempo").innerHTML = "Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS</font>";
   timeleft -= 1;
-  if(timeleft <= -1){
+  if(timeleft <= -2){
     clearInterval(downloadTimer);
-    document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (risco de kp).";
     document.getElementById("tempo").innerHTML = "";
-	contraKP();
+    document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (risco de kp).";
+ 	contraKP();
   }
 }, 1000);
 
@@ -150691,7 +150691,7 @@ if (main_ret == 179 || main_ret == 0) {
 } 
 else {
 	localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-  window.msgs.innerHTML="<h1 style='font-size:30px;'>New Exploit failed! - Reboot your PS4 and try again.</h1>";
+	window.msgs.innerHTML="<h1 style='font-size:30px;'>New Exploit failed! - Reboot your PS4 and try again.</h1>";
 }
 }
 }
