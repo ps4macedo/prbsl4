@@ -11,7 +11,8 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.getElementById("tempo").innerHTML = "";
     document.getElementById("msgs").innerHTML = "<br>Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
- 	setTimeout(function(){contraKP();}, 500);
+ 	contraKP();
+	//setTimeout(function(){contraKP();}, 500);
   }
 }, 1000);
 
