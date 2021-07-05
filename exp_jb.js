@@ -11,11 +11,9 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.getElementById("tempo").innerHTML = "";
     document.getElementById("msgs").innerHTML = "<br>Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
- 	var parar setInterval(function(){clearInterval(parar);contraKP();}, 200);
+ 	contraKP();
   }
 }, 1000);
-
-//let pausa = setTimeout(contraKP, 108000);
 
 function contraKP(){
 var ropchain_offset = 2;
