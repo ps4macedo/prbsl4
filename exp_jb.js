@@ -3,7 +3,7 @@ var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
 
-var timeleft = 120;
+var timeleft = 60;
 var downloadTimer = setInterval(function(){
   document.getElementById("tempo").innerHTML = "Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS (com alteração)</font>";
   timeleft -= 1;
@@ -11,8 +11,8 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.getElementById("tempo").innerHTML = "";
     document.getElementById("msgs").innerHTML = "<br>Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
- 	contraKP();
-	//setTimeout(function(){contraKP();}, 500);
+ 	//contraKP();
+	setTimeout(function(){contraKP();}, 500);
   }
 }, 1000);
 
