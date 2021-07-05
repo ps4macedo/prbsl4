@@ -5,7 +5,7 @@ var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
 var timeleft = 120;
 var downloadTimer = setInterval(function(){
-  document.getElementById("tempo").innerHTML = "Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS</font>";
+  document.getElementById("tempo").innerHTML = "Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS (com alteração)</font>";
   timeleft -= 1;
   if(timeleft <= -2){
     clearInterval(downloadTimer);
