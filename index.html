@@ -74,7 +74,7 @@ mymenu.style.display="block";
 	  <h2 id=tempo style='font-size:32px;text-align:center;'></h1>
       
 	  <div style="text-align:left;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:#3dff8e">     
-	  <div>Passou = <font color="#6089f6"><span id=passCounter></span></font>&nbsp;&nbsp;/&nbsp;&nbsp;Falhou = <font color="#ee596f"><span id=failCounter></span></font></div>
+	  <div>Passou = <font color="#6089f6"><span id=passCounter></span></font>&nbsp;&nbsp;/&nbsp;&nbsp;Falhou = <font color="#ee596f"><span id=failCounter></span></font>&nbsp;&nbsp;-&nbsp;&nbsp;Desempenho:&nbsp;<font color="#6089f6"><span id=desempenho></span>%</font></div>
       Versão do firmware deste PS4: <font color="#6089f6">7.55</font> - <font color="#ee596f"><span id="infoDesb"></span></font><br>
 	  Agradecimentos: <font color="#6089f6">Leeful-KiiWii-Sleirsgoevy-theflow-Karo-AlAzif-Joonie86-Team Synacktiv-e todos devs da cena PS4.</font>
 	  </div>
@@ -94,6 +94,8 @@ if (localStorage.passcount == null) localStorage.passcount=0;
 	window.passCounter.innerHTML=localStorage.passcount;
 if (localStorage.failcount == null) localStorage.failcount=0;
 	window.failCounter.innerHTML=localStorage.failcount;
+if (localStorage.desempenho == null) localStorage.desempenho="Ainda sem dados";
+	window.desempenho.innerHTML=localStorage.desempenho;
 
 function load_exploit(){
 msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>2 minutos</font>. Por favor, não use o controle.<br><font style='color:#ee596f'>A G U A R D E . . .</font><br><br>";

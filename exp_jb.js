@@ -150684,14 +150684,17 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
+
+
+
 if (main_ret == 179 || main_ret == 0) {
-	localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
+	localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount; localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
 	localStorage.infoDesb = "<font style='color:#6089f6'>Exploração do kernel realizada.</font>";window.infoDesb.innerHTML=localStorage.infoDesb; 
 	let pausa_hen = setTimeout(load_hen, 2000);
 } 
 else {
-	localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-	window.msgs.innerHTML="<h1 style='font-size:30px;'>New Exploit failed! - Reboot your PS4 and try again.</h1>";
+	localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount; localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
+	window.msgs.innerHTML="<h1 style='font-size:30px;'>A exploração falhou! - Reinicie o PS4 e tente novamente.</h1>";
 }
 }
 }
